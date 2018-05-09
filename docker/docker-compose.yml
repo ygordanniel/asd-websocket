@@ -1,0 +1,12 @@
+version: "3"
+services:
+  server:
+    image: uniceub/websocket-server
+    ports:
+      - "8080:8080"
+  client:
+    image: uniceub/websocket-client
+    ports:
+      - "8081:8081"
+    links:
+      - server
